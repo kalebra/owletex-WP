@@ -27,7 +27,7 @@
             </div>
             <nav>
                 <a href="/">Новости</a>
-                <a href="/">Войти</a>
+                <div class="login">Войти</div>
                 <div class="divider"></div>
                 <a href="/" class="sign-up">Зарегистрироваться</a>
                 <div class="dropdown-language">
@@ -35,11 +35,13 @@
                         En
                         <span class="arrow-down"></span>
                     </a>
-                    <div class="dropdown-choices">
-                        <a href="#">En</a>
-                        <a href="#">Ru</a>
-                        <a href="#">Fr</a>
-                        <a href="#">Gr</a>
+                    <div class="dropdown choices">
+                        <ul>
+                            <li class="active">En</li>
+                            <li>Ru</li>
+                            <li>Fr</li>
+                            <li>Gr</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="burger">
@@ -47,15 +49,15 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    <div class="burger-menu">
-                        <a href="/">Преимущества</a>
-                        <a href="/">Биржи с которыми работает сервис</a>
-                        <a href="/">Схема работы</a>
-                        <a href="/">Основные возможности</a>
-                        <a href="/">Тарифы</a>
-                        <a href="/">FAQ</a>
-                        <a href="/">Новости</a>
-                        <a href="/">Партнеры</a>
+                    <div class="dropdown burger-menu">
+                        <a href="#adv">Преимущества</a>
+                        <a href="#exc">Биржи с которыми работает сервис</a>
+                        <a href="#sch">Схема работы</a>
+                        <a href="#opp">Основные возможности</a>
+                        <a href="#tar">Тарифы</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#new">Новости</a>
+                        <a href="#par">Партнеры</a>
                         <a href="/">Войти</a>
                         <div>
                             <a href="/" class="sign-up">Зарегистрироваться</a>
@@ -85,7 +87,7 @@
         </div>
     </header>
 </div>
-<section class="advantages">
+<section class="advantages" id="adv">
     <h2>Преимущества</h2>
     <div class="head-line"></div>
     <div class="adv-desc">
@@ -178,13 +180,13 @@
         </div>
     </div>
 </section>
-<section class="exchanges">
+<section class="exchanges" id="exc">
     <img src="<?php bloginfo('template_url'); ?>/img/exchanges-greed.svg" alt="exchanges-greed">
     <h2>Биржи с которыми работает сервис</h2>
     <div class="head-line light"></div>
     <div id="exchanges-anim"></div>
 </section>
-<section class="scheme-of-work">
+<section class="scheme-of-work" id="sch">
     <h2>Схема работы</h2>
     <div class="head-line"></div>
     <div class="main-content">
@@ -209,7 +211,7 @@
     </div>
     <div class="btn-reg">Зарегистрироваться</div>
 </section>
-<section class="main-opportunities">
+<section class="main-opportunities" id="opp">
     <h2>Основные возможности</h2>
     <div class="head-line light"></div>
     <div class="main-content">
@@ -237,16 +239,16 @@
             <div class="opp-img-back-wrapp">
                 <div class="opp-img-back"></div>
             </div>
-            <div class="opp-img">
-                <!--<div class="opp-img fir" data-aos="fade-down" data-aos-offset="300" data-aos-anchor-placement="top-center">-->
+<!--            <div class="opp-img fir">-->
+            <div class="opp-img fir" data-aos="fade-down" data-aos-offset="300" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity1.png" alt="Opportunity 1">
             </div>
-            <div class="opp-img">
-                <!--<div class="opp-img" data-aos="fade-down" data-aos-offset="300" data-aos-anchor-placement="top-center">-->
+<!--            <div class="opp-img">-->
+            <div class="opp-img" data-aos="fade-down" data-aos-offset="400" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity2.png" alt="Opportunity 2">
             </div>
-            <div class="opp-img">
-                <!--<div class="opp-img" data-aos="fade-down" data-aos-offset="500" data-aos-anchor-placement="top-center">-->
+<!--            <div class="opp-img">-->
+            <div class="opp-img" data-aos="fade-down" data-aos-offset="700" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity3.png" alt="Opportunity 3">
             </div>
         </div>
@@ -261,7 +263,7 @@
         <div class="btn-reg">Зарегистрироваться</div>
     </div>
 </section>
-<section class="tariffs">
+<section class="tariffs" id="tar">
     <img src="<?php bloginfo('template_url'); ?>/img/tarrifs-greed.svg" alt="tariffs-greed">
     <h2>Тарифы</h2>
     <div class="head-line"></div>
@@ -371,49 +373,50 @@
         <img src="<?php bloginfo('template_url'); ?>/img/payment-methods/paypal.png" alt="PayPal">
     </div>
 </section>
-<section class="faq">
+<section class="faq" id="faq">
     <img src="<?php bloginfo('template_url'); ?>/img/faq-bg.svg" alt="faq-background">
     <img src="<?php bloginfo('template_url'); ?>/img/faq-greed.svg" alt="faq-greed">
     <h2>FAQ</h2>
     <div class="head-line light"></div>
     <div class="faq-inner">
-        <div class="quick-answers">
-            <div class="question-head">Вопрос 1</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 2</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 3</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 4</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 5</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 6</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-            <div class="question-head">Вопрос 7</div>
-            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и
-                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм
-                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.
-                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>
-        </div>
+        <?php echo do_shortcode("[accordions id='116']"); ?>
+<!--        <div class="quick-answers">-->
+<!--            <div class="question-head">Вопрос 1</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 2</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 3</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 4</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 5</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 6</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--            <div class="question-head">Вопрос 7</div>-->
+<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
+<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
+<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
+<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
+<!--        </div>-->
         <div class="ask">
             <div class="ask-info">Все равно ничего не поняли? Отправьте любой интересующий вас вопрос и мы ответим Вам в самое кратчайшее время.</div>
             <div class="ask-form">
@@ -431,56 +434,27 @@
         </div>
     </div>
 </section>
-<section class="news">
+<section class="news" id="new">
     <h2>Новости</h2>
     <div class="head-line"></div>
     <div class="news-cards">
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
-        <div class="news-card">
-            <div class="card-head"></div>
-            <div class="card-body">
-                <div class="news-header">Таким образом дальнейшее развитие различных форм.</div>
-                <div class="news-content">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм деятельности влечет аправлений.</div>
-            </div>
-        </div>
+        <?php
+            while( have_posts() ) : the_post();
+        ?>
+                <div class="news-card">
+                    <div class="card-head"><?php echo get_the_post_thumbnail(); ?></div>
+                    <div class="card-body">
+                        <div class="news-header"><?php the_title(); ?></div>
+                        <div class="news-content"><?php the_content(); ?></div>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+        ?>
     </div>
     <div class="btn-all-news">Все новости</div>
 </section>
-<section class="partners">
+<section class="partners" id="par">
     <h2>Партнёры</h2>
     <div class="partners-logos">
         <div class="partners-logo">
@@ -527,6 +501,32 @@
         <div class="copyright"><?php echo get_theme_mod( 'footer-2', '@2018 Owletex. Все права защищены' ); ?></div>
     </div>
 </footer>
+
+<!--<div class="modal_login">-->
+<!--    <div class="mask"></div>-->
+<!--    <div class="content">-->
+<!--        <div class="modal-head">-->
+<!--            <div class="modal-title">Авторизация</div>-->
+<!--            <img src="--><?php //bloginfo('template_url'); ?><!--/img/close.svg" alt="close">-->
+<!--        </div>-->
+<!--        <div class="modal-content">-->
+<!--            <form action="">-->
+<!--                <input type="text" id="login" placeholder="Email или логин">-->
+<!--                <input type="password" id="pass" placeholder="Пароль">-->
+<!--                <input type="password" id="twofa" placeholder="2FA код">-->
+<!--                <div class="captcha"></div>-->
+<!--                <div>-->
+<!--                    <label class="container">Запомнить меня-->
+<!--                        <input type="checkbox">-->
+<!--                        <span class="checkmark"></span>-->
+<!--                    </label>-->
+<!--                    <button type="button" >Войти</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="modal-footer"></div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <?php wp_footer() ?>
 </body>

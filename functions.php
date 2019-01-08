@@ -12,7 +12,7 @@
         wp_enqueue_style('style-main', get_stylesheet_directory_uri() . '/style/style.css', false, time() );
 
         wp_deregister_script('jquery');
-        wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, null, true);
+        wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, null);
         wp_enqueue_script('jquery');
 
         wp_enqueue_script('lottie', get_stylesheet_directory_uri() . '/js/lottie.min.js', false, null, true );
@@ -30,3 +30,4 @@
         remove_action('wp_head', '_admin_bar_bump_cb');
     }
     add_action('get_header', 'remove_admin_login_header');
+    add_theme_support( 'post-thumbnails' );

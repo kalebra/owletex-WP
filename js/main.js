@@ -1,13 +1,49 @@
 AOS.init();
 
 jQuery(document).ready(function($) {
+    //спрятать все выпадающие окна при внешнем клике
+    $(document).click(function(){
+        $(".dropdown").slideUp();
+        $('.burger.open').removeClass('open');
+    });
+
+    //выбор языка
+    $('.dropdown-active').click(function(e){
+        e.stopPropagation();
+        $('.burger.open').removeClass('open');
+        $('.dropdown').not($('.dropdown.choices')).slideUp(100);
+
+        $('.dropdown.choices').slideToggle(250);
+    });
+
+    //меняем язык при выборе другого
+    $('.dropdown.choices ul li').click(function () {
+        $('.dropdown.choices ul li').removeClass('active');
+        $(this).addClass('active');
+        $(".dropdown-active").contents().filter(function(){
+            return this.nodeType == 3;
+        })[0].nodeValue = $(this).text();
+        $('.dropdown.choices').slideUp();
+    });
+
     //клик по бургеру
-    $('.burger').click(function () {
+    $('.burger').click(function (e) {
+        e.stopPropagation();
+        $('.dropdown').not('.burger-menu').slideUp(100);
+
         $(this).toggleClass('open');
         $('.burger-menu').slideToggle();
     });
 
-    console.log(templateUrl);
+    //переход по якорной ссылке в меню бургера
+    $(".burger-menu a").click(function () {
+        var elementClick = $(this).attr("href")
+        var destination = $(elementClick).offset().top;
+        jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+        $('.burger-menu').slideUp();
+        $('.burger.open').removeClass('open');
+        return false;
+    });
 
     //блок преимуществ - подключений анимаций
     var anim1 = lottie.loadAnimation({
@@ -158,7 +194,7 @@ jQuery(document).ready(function($) {
         path: templateUrl + '/js/animation/exchanges.json'
     });
 
-    //блое схемы работы, анимация
+    //блок схемы работы, анимация
     lottie.loadAnimation({
         container: document.getElementById('scheme-anim'),
         renderer: 'svg',
@@ -168,14 +204,17 @@ jQuery(document).ready(function($) {
     });
 
     //блок возможностей, анимация в конце блока
-    // $(window).scroll(function(){
-    //     console.log($('.fir').offset().top);
-    //     if ($('.fir').offset().top >= '5524') {
-    //         $('.opp-imgs').addClass('smaller');
-    //     } else {
-    //         $('.opp-imgs').removeClass('smaller');
-    //     }
-    // });
+    $(window).scroll(function(){
+        var my_offset = $('.fir').offset().top - $('.opp-imgs').offset().top;
+        // console.log(my_offset);
+        var target_offset = 1980;
+        if ($(window).width() < 1025) target_offset = 2240;
+        if (my_offset >= target_offset) {
+            $('.opp-imgs').addClass('smaller');
+        } else {
+            $('.opp-imgs').removeClass('smaller');
+        }
+    });
 
     //блок тарифов, слайдер карточек
     $('.cards-tariffs').slick({
