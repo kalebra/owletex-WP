@@ -15,69 +15,71 @@
     <?php wp_head() ?>
 </head>
 <body>
+<div class="top-line-wrapper">
+    <div class="top-line">
+        <div class="logo">
+            <a href="/"></a>
+        </div>
+        <nav>
+            <a href="/">Новости</a>
+            <div class="login">Войти</div>
+            <div class="divider"></div>
+            <a href="/" class="sign-up">Зарегистрироваться</a>
+            <div class="dropdown-language">
+                <a href="#" class="dropdown-active">
+                    En
+                    <span class="arrow-down"></span>
+                </a>
+                <div class="dropdown choices">
+                    <ul>
+                        <li class="active">En</li>
+                        <li>Ru</li>
+                        <li>Fr</li>
+                        <li>Gr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="dropdown burger-menu">
+                    <a href="#adv">Преимущества</a>
+                    <a href="#exc">Биржи с которыми работает сервис</a>
+                    <a href="#sch">Схема работы</a>
+                    <a href="#opp">Основные возможности</a>
+                    <a href="#tar">Тарифы</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#new">Новости</a>
+                    <a href="#par">Партнеры</a>
+                    <a href="/">Войти</a>
+                    <div>
+                        <a href="/" class="sign-up">Зарегистрироваться</a>
+                        <div class="dropdown-language">
+                            <a href="#" class="dropdown-active">
+                                En
+                                <span class="arrow-down"></span>
+                            </a>
+                            <div class="dropdown-choices">
+                                <a href="#">En</a>
+                                <a href="#">Ru</a>
+                                <a href="#">Fr</a>
+                                <a href="#">Gr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
 <div class="header-wrapper">
     <div class="header-background-wrapper">
         <img src="<?php bloginfo('template_url'); ?>/img/header-bg.svg" alt="header-background">
         <img src="<?php bloginfo('template_url'); ?>/img/header-greed.svg" alt="header-greed">
     </div>
     <header>
-        <div class="top-line">
-            <div class="logo">
-                <a href="/"></a>
-            </div>
-            <nav>
-                <a href="/">Новости</a>
-                <div class="login">Войти</div>
-                <div class="divider"></div>
-                <a href="/" class="sign-up">Зарегистрироваться</a>
-                <div class="dropdown-language">
-                    <a href="#" class="dropdown-active">
-                        En
-                        <span class="arrow-down"></span>
-                    </a>
-                    <div class="dropdown choices">
-                        <ul>
-                            <li class="active">En</li>
-                            <li>Ru</li>
-                            <li>Fr</li>
-                            <li>Gr</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div class="dropdown burger-menu">
-                        <a href="#adv">Преимущества</a>
-                        <a href="#exc">Биржи с которыми работает сервис</a>
-                        <a href="#sch">Схема работы</a>
-                        <a href="#opp">Основные возможности</a>
-                        <a href="#tar">Тарифы</a>
-                        <a href="#faq">FAQ</a>
-                        <a href="#new">Новости</a>
-                        <a href="#par">Партнеры</a>
-                        <a href="/">Войти</a>
-                        <div>
-                            <a href="/" class="sign-up">Зарегистрироваться</a>
-                            <div class="dropdown-language">
-                                <a href="#" class="dropdown-active">
-                                    En
-                                    <span class="arrow-down"></span>
-                                </a>
-                                <div class="dropdown-choices">
-                                    <a href="#">En</a>
-                                    <a href="#">Ru</a>
-                                    <a href="#">Fr</a>
-                                    <a href="#">Gr</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
         <div class="header-main">
             <div class="header-main-left">
                 <h1><?php echo get_theme_mod( 'header-h1', 'Краткое описание сервиса в одном предложении' ); ?></h1>
@@ -380,43 +382,6 @@
     <div class="head-line light"></div>
     <div class="faq-inner">
         <?php echo do_shortcode("[accordions id='116']"); ?>
-<!--        <div class="quick-answers">-->
-<!--            <div class="question-head">Вопрос 1</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 2</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 3</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 4</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 5</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 6</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--            <div class="question-head">Вопрос 7</div>-->
-<!--            <div class="question-body">Таким образом дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и-->
-<!--                модернизации направлений прогрессивного развития. Таким образом дальнейшее развитие различных форм-->
-<!--                деятельности влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.-->
-<!--                Таким образом дальнейшее развитие различных форм деятельности влечет.</div>-->
-<!--        </div>-->
         <div class="ask">
             <div class="ask-info">Все равно ничего не поняли? Отправьте любой интересующий вас вопрос и мы ответим Вам в самое кратчайшее время.</div>
             <div class="ask-form">

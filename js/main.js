@@ -203,16 +203,28 @@ jQuery(document).ready(function($) {
         path: templateUrl + '/js/animation/scheme-of-work.json'
     });
 
-    //блок возможностей, анимация в конце блока
+
     $(window).scroll(function(){
+        //блок возможностей, анимация в конце блока
         var my_offset = $('.fir').offset().top - $('.opp-imgs').offset().top;
-        // console.log(my_offset);
         var target_offset = 1980;
         if ($(window).width() < 1025) target_offset = 2240;
         if (my_offset >= target_offset) {
             $('.opp-imgs').addClass('smaller');
         } else {
             $('.opp-imgs').removeClass('smaller');
+        }
+
+        var scrollTop = $(window).scrollTop();
+        console.log(scrollTop);
+        if (scrollTop > 1) {
+            $('header').addClass('alt');
+            $('.top-line-wrapper').addClass('alt');
+            $('.advantages').addClass('alt');
+        } else {
+            $('header').removeClass('alt');
+            $('.top-line-wrapper').removeClass('alt');
+            $('.advantages').removeClass('alt');
         }
     });
 

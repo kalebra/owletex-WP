@@ -90,7 +90,8 @@ textarea:focus {
   height: 720px;
   width: 100%;
   margin-bottom: 120px;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 .header-wrapper .header-background-wrapper {
   width: 100%;
@@ -118,20 +119,44 @@ textarea:focus {
 }
 header {
   width: 100%;
+  height: 810px;
   max-width: 1440px;
   margin: 0 auto;
-  height: 810px;
-  position: relative;
 }
-.top-line {
+.top-line-wrapper {
+  width: 100vw;
+  height: 128px;
+  position: sticky;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+.top-line-wrapper.alt {
+  height: 88px;
+  background: #fff;
+}
+.top-line-wrapper.alt .logo {
+  background: url(../img/logo-2.svg) no-repeat;
+}
+.top-line-wrapper.alt nav > a:first-child {
+  color: #36344F;
+}
+.top-line-wrapper.alt nav > div:nth-child(2) {
+  color: #36344F;
+}
+.top-line-wrapper.alt nav .divider {
+  background-color: rgba(54, 52, 79, 0.45);
+}
+.top-line-wrapper .top-line {
   box-sizing: border-box;
   width: 100%;
-  height: 128px;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 64px;
-  margin-bottom: 79px;
 }
 .logo {
   flex: 0 0 199px;
@@ -320,11 +345,12 @@ nav .divider {
   padding: 0 64px;
   display: flex;
   position: relative;
+  margin-top: 207px;
 }
 .header-main img {
   position: absolute;
-  right: 0;
   top: -120px;
+  right: -57px;
   width: 842px;
   height: 779px;
 }
@@ -345,8 +371,11 @@ nav .divider {
 .advantages {
   box-sizing: border-box;
   max-width: 1440px;
-  margin: 0 auto 124px;
+  margin: 840px auto 124px;
   padding: 24px 64px 0;
+}
+.advantages.alt {
+  margin: 980px auto 124px;
 }
 .advantages .adv-desc .adv-desc-inner {
   display: flex;
@@ -649,21 +678,19 @@ nav .divider {
 }
 .main-opportunities .main-content .opp-imgs.smaller {
   padding-bottom: 100px;
+  max-width: 512px;
 }
 .main-opportunities .main-content .opp-imgs.smaller .opp-img {
-  width: 541px;
+  width: 100%;
 }
 .main-opportunities .main-content .opp-imgs.smaller .opp-img:nth-child(2) {
-  transform: translateX(-735px);
+  transform: translateX(-560px);
 }
 .main-opportunities .main-content .opp-imgs.smaller .opp-img:nth-child(3) {
-  transform: translateX(-345px);
-}
-.main-opportunities .main-content .opp-imgs.smaller .opp-img:nth-child(4) {
-  transform: translateX(45px);
+  transform: translateX(-280px);
 }
 .main-opportunities .main-content .opp-imgs.smaller img {
-  width: 540px;
+  width: 110%;
 }
 .main-opportunities .main-content .opp-img {
   align-self: flex-start;
@@ -1066,7 +1093,6 @@ nav .divider {
 .news .news-cards {
   width: 100%;
   margin: 0 auto 40px;
-  padding: 0 48px;
 }
 .news .news-cards:nth-child(3n) .card-head {
   background: #501FA5;
