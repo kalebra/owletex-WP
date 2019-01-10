@@ -26,10 +26,10 @@
             <div class="divider"></div>
             <a href="/" class="sign-up">Зарегистрироваться</a>
             <div class="dropdown-language">
-                <a href="#" class="dropdown-active">
+                <div class="dropdown-active">
                     En
                     <span class="arrow-down"></span>
-                </a>
+                </div>
                 <div class="dropdown choices">
                     <ul>
                         <li class="active">En</li>
@@ -57,15 +57,17 @@
                     <div>
                         <a href="/" class="sign-up">Зарегистрироваться</a>
                         <div class="dropdown-language">
-                            <a href="#" class="dropdown-active">
+                            <div class="dropdown-active">
                                 En
                                 <span class="arrow-down"></span>
-                            </a>
-                            <div class="dropdown-choices">
-                                <a href="#">En</a>
-                                <a href="#">Ru</a>
-                                <a href="#">Fr</a>
-                                <a href="#">Gr</a>
+                            </div>
+                            <div class="dropdown choices">
+                                <ul>
+                                    <li class="active">En</li>
+                                    <li>Ru</li>
+                                    <li>Fr</li>
+                                    <li>Gr</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

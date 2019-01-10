@@ -1,6 +1,17 @@
 AOS.init();
 
 jQuery(document).ready(function($) {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > 1) {
+        $('header').addClass('alt');
+        $('.top-line-wrapper').addClass('alt');
+        $('.advantages').addClass('alt');
+    } else {
+        $('header').removeClass('alt');
+        $('.top-line-wrapper').removeClass('alt');
+        $('.advantages').removeClass('alt');
+    }
+
     //спрятать все выпадающие окна при внешнем клике
     $(document).click(function(){
         $(".dropdown").slideUp();
@@ -10,19 +21,32 @@ jQuery(document).ready(function($) {
     //выбор языка
     $('.dropdown-active').click(function(e){
         e.stopPropagation();
-        $('.burger.open').removeClass('open');
-        $('.dropdown').not($('.dropdown.choices')).slideUp(100);
+
+        if ($(window).width() > 767) {
+            $('.burger.open').removeClass('open');
+            $('.dropdown').not($('.dropdown.choices')).slideUp(100);
+        }
 
         $('.dropdown.choices').slideToggle(250);
     });
 
     //меняем язык при выборе другого
-    $('.dropdown.choices ul li').click(function () {
+    $('.dropdown.choices ul li').click(function(e) {
+        e.stopPropagation();
+
         $('.dropdown.choices ul li').removeClass('active');
         $(this).addClass('active');
-        $(".dropdown-active").contents().filter(function(){
-            return this.nodeType == 3;
-        })[0].nodeValue = $(this).text();
+
+        if ($(window).width() > 767) {
+            $(".dropdown-active").contents().filter(function(){
+                return this.nodeType == 3;
+            })[0].nodeValue = $(this).text();
+        } else {
+            $(".dropdown-active").contents().filter(function(){
+                return this.nodeType == 3;
+            })[2].nodeValue = $(this).text();
+        }
+
         $('.dropdown.choices').slideUp();
     });
 
@@ -205,18 +229,8 @@ jQuery(document).ready(function($) {
 
 
     $(window).scroll(function(){
-        //блок возможностей, анимация в конце блока
-        var my_offset = $('.fir').offset().top - $('.opp-imgs').offset().top;
-        var target_offset = 1980;
-        if ($(window).width() < 1025) target_offset = 2240;
-        if (my_offset >= target_offset) {
-            $('.opp-imgs').addClass('smaller');
-        } else {
-            $('.opp-imgs').removeClass('smaller');
-        }
-
+        //анимация меню хедера
         var scrollTop = $(window).scrollTop();
-        console.log(scrollTop);
         if (scrollTop > 1) {
             $('header').addClass('alt');
             $('.top-line-wrapper').addClass('alt');
@@ -225,6 +239,16 @@ jQuery(document).ready(function($) {
             $('header').removeClass('alt');
             $('.top-line-wrapper').removeClass('alt');
             $('.advantages').removeClass('alt');
+        }
+
+        //блок возможностей, анимация в конце блока
+        var my_offset = $('.fir').offset().top - $('.opp-imgs').offset().top;
+        var target_offset = 1980;
+        if ($(window).width() < 1025) target_offset = 2240;
+        if (my_offset >= target_offset) {
+            $('.opp-imgs').addClass('smaller');
+        } else {
+            $('.opp-imgs').removeClass('smaller');
         }
     });
 
@@ -256,18 +280,28 @@ jQuery(document).ready(function($) {
 
     //блок новостей, слайдер
     $('.news-cards').slick({
-        infinite: true,
+        dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 4000,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
-                    slidesToShow: 1,
-                    infinite: false,
+                    dots: false,
+                    centerMode: true,
+                    arrows: false,
                     variableWidth: true,
+                    respondTo: 'min',
+                },
+                breakpoint: 769,
+                settings: {
+                    dots: false,
+                    centerMode: false,
+                    arrows: false,
+                    variableWidth: true,
+                    respondTo: 'min',
                 }
             }
         ]
