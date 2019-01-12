@@ -30,25 +30,14 @@ jQuery(document).ready(function($) {
         $('.dropdown.choices').slideToggle(250);
     });
 
-    //меняем язык при выборе другого
-    $('.dropdown.choices ul li').click(function(e) {
-        e.stopPropagation();
-
-        $('.dropdown.choices ul li').removeClass('active');
-        $(this).addClass('active');
-
-        if ($(window).width() > 767) {
-            $(".dropdown-active").contents().filter(function(){
-                return this.nodeType == 3;
-            })[0].nodeValue = $(this).text();
-        } else {
-            $(".dropdown-active").contents().filter(function(){
-                return this.nodeType == 3;
-            })[2].nodeValue = $(this).text();
-        }
-
-        $('.dropdown.choices').slideUp();
-    });
+    //считываем текущий язык
+    var path = window.location.pathname;
+    path = path.split("/")[2];
+    if (!path) {
+        path = 'ru';
+    }
+    var lang = $('nav > .dropdown-language > .dropdown-active').html();
+    $('nav > .dropdown-language > .dropdown-active').html(path + lang);
 
     //клик по бургеру
     $('.burger').click(function (e) {
@@ -283,7 +272,7 @@ jQuery(document).ready(function($) {
         dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 4000,
         responsive: [
             {

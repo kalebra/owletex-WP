@@ -30,4 +30,27 @@
         remove_action('wp_head', '_admin_bar_bump_cb');
     }
     add_action('get_header', 'remove_admin_login_header');
+
+    //включить миниатюры постов
     add_theme_support( 'post-thumbnails' );
+
+    //мультиязычность
+    function setup_theme(){
+        load_theme_textdomain('owletex-landing', get_template_directory() . '/languages');
+    }
+    add_action('after_setup_theme', 'setup_theme');
+
+    //инициализации меню
+    function register_my_menu() {
+        register_nav_menu('header-menu',__( 'Header Menu' ));
+    }
+    add_action( 'init', 'register_my_menu' );
+
+    function register_my_menus() {
+        register_nav_menus(
+            array(
+                'header-menu' => __( 'Header Menu' )
+            )
+        );
+    }
+    add_action( 'init', 'register_my_menus' );

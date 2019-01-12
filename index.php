@@ -21,21 +21,20 @@
             <a href="/"></a>
         </div>
         <nav>
-            <a href="/">Новости</a>
-            <div class="login">Войти</div>
+            <a href="/"><?php _e('Новости', 'owletex-landing'); ?></a>
+            <div class="login"><?php _e('Войти', 'owletex-landing'); ?></div>
             <div class="divider"></div>
-            <a href="/" class="sign-up">Зарегистрироваться</a>
+            <a href="/" class="sign-up"><?php _e('Зарегистрироваться', 'owletex-landing'); ?></a>
             <div class="dropdown-language">
                 <div class="dropdown-active">
-                    En
                     <span class="arrow-down"></span>
                 </div>
                 <div class="dropdown choices">
                     <ul>
-                        <li class="active">En</li>
-                        <li>Ru</li>
-                        <li>Fr</li>
-                        <li>Gr</li>
+                        <li class="active"><a href="http://localhost/wp/" hreflang="ru-RU" lang="ru-RU">Ru</a></li>
+                        <li><a href="http://localhost/wp/en/" hreflang="en-GB" lang="en-GB">En</a></li>
+                        <li><a href="http://localhost/wp/fr/" hreflang="fr-FR" lang="fr-FR">Fr</a></li>
+                        <li><a href="http://localhost/wp/de/" hreflang="de-DE" lang="de-DE">De</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,17 +44,17 @@
                 <span></span>
                 <span></span>
                 <div class="dropdown burger-menu">
-                    <a href="#adv">Преимущества</a>
-                    <a href="#exc">Биржи с которыми работает сервис</a>
-                    <a href="#sch">Схема работы</a>
-                    <a href="#opp">Основные возможности</a>
-                    <a href="#tar">Тарифы</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#new">Новости</a>
-                    <a href="#par">Партнеры</a>
-                    <a href="/">Войти</a>
+                    <a href="#adv"><?php _e('Преимущества', 'owletex-landing'); ?></a>
+                    <a href="#exc"><?php _e('Биржи с которыми работает сервис', 'owletex-landing'); ?></a>
+                    <a href="#sch"><?php _e('Схема работы', 'owletex-landing'); ?></a>
+                    <a href="#opp"><?php _e('Основные возможности', 'owletex-landing'); ?></a>
+                    <a href="#tar"><?php _e('Тарифы', 'owletex-landing'); ?></a>
+                    <a href="#faq"><?php _e('FAQ', 'owletex-landing'); ?></a>
+                    <a href="#new"><?php _e('Новости', 'owletex-landing'); ?></a>
+                    <a href="#par"><?php _e('Партнеры', 'owletex-landing'); ?></a>
+                    <a href="/"><?php _e('Войти', 'owletex-landing'); ?></a>
                     <div>
-                        <a href="/" class="sign-up">Зарегистрироваться</a>
+                        <a href="/" class="sign-up"><?php _e('Войти', 'owletex-landing'); ?>Зарегистрироваться</a>
                         <div class="dropdown-language">
                             <div class="dropdown-active">
                                 En
@@ -243,15 +242,12 @@
             <div class="opp-img-back-wrapp">
                 <div class="opp-img-back"></div>
             </div>
-<!--            <div class="opp-img fir">-->
             <div class="opp-img fir" data-aos="fade-down" data-aos-offset="300" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity1.png" alt="Opportunity 1">
             </div>
-<!--            <div class="opp-img">-->
             <div class="opp-img" data-aos="fade-down" data-aos-offset="400" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity2.png" alt="Opportunity 2">
             </div>
-<!--            <div class="opp-img">-->
             <div class="opp-img" data-aos="fade-down" data-aos-offset="700" data-aos-anchor-placement="top-center">
                 <img src="<?php bloginfo('template_url'); ?>/img/opportunities/opportunity3.png" alt="Opportunity 3">
             </div>
@@ -269,7 +265,7 @@
 </section>
 <section class="tariffs" id="tar">
     <img src="<?php bloginfo('template_url'); ?>/img/tarrifs-greed.svg" alt="tariffs-greed">
-    <h2>Тарифы</h2>
+    <h2><?php _e('Тарифы', 'owletex-landing'); ?></h2>
     <div class="head-line"></div>
     <div class="cards-tariffs">
         <div class="card-tariffs">
@@ -468,33 +464,6 @@
         <div class="copyright"><?php echo get_theme_mod( 'footer-2', '@2018 Owletex. Все права защищены' ); ?></div>
     </div>
 </footer>
-
-<!--<div class="modal_login">-->
-<!--    <div class="mask"></div>-->
-<!--    <div class="content">-->
-<!--        <div class="modal-head">-->
-<!--            <div class="modal-title">Авторизация</div>-->
-<!--            <img src="--><?php //bloginfo('template_url'); ?><!--/img/close.svg" alt="close">-->
-<!--        </div>-->
-<!--        <div class="modal-content">-->
-<!--            <form action="">-->
-<!--                <input type="text" id="login" placeholder="Email или логин">-->
-<!--                <input type="password" id="pass" placeholder="Пароль">-->
-<!--                <input type="password" id="twofa" placeholder="2FA код">-->
-<!--                <div class="captcha"></div>-->
-<!--                <div>-->
-<!--                    <label class="container">Запомнить меня-->
-<!--                        <input type="checkbox">-->
-<!--                        <span class="checkmark"></span>-->
-<!--                    </label>-->
-<!--                    <button type="button" >Войти</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--        <div class="modal-footer"></div>-->
-<!--    </div>-->
-<!--</div>-->
-
 <?php wp_footer() ?>
 </body>
 </html>
